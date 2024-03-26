@@ -1,0 +1,124 @@
+@import "./_variables.css";
+@import "../components/layout/partials/header/header.css";
+@import "../components/layout/partials/navbar/navbar.css";
+@import "../components/main/main.css";
+@import "../components/layout/partials/form/form.css";
+@import "../components/layout/partials/footer/footer.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  border-radius: 0.5rem;
+  outline: 0.2rem;
+  outline-style: dashed;
+  outline-color: var(--blue-500);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--blue-500);
+  background-color: var(--white-100);
+  font-size: 16px;
+  font-family: "EB Garamond", serif;
+}
+
+h1 {
+  font-size: 7.4rem;
+}
+
+h2 {
+  font-size: 6.2rem;
+}
+
+h3 {
+  font-size: 5.2rem;
+}
+
+h4 {
+  font-size: 4.4rem;
+}
+
+h5 {
+  font-size: 3.6rem;
+}
+
+h6 {
+  font-size: 2.4rem;
+}
+
+p,
+a,
+li {
+  font-size: 2rem;
+}
+
+.container {
+  display: grid;
+  height: auto;
+  max-width: 100%;
+  row-gap: 5rem;
+}
+
+.section {
+  margin: 0 9.6rem;
+}
+
+address {
+  text-decoration: none;
+}
+
+a {
+  color: var(--white-100);
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  line-height: 5rem;
+}
+
+.img:hover {
+  transform: rotate(90deg);
+  transition: all 500ms;
+}
+
+.img:not(:hover) {
+  transform: rotate(0deg);
+  transition: all 500ms;
+}
+
+.img:hover + hgroup .blue-hover {
+  color: var(--blue-hover);
+  transition: all 700ms;
+}
+
+.img:hover + hgroup .red-hover {
+  color: var(--red-hover);
+  transition: all 700ms;
+}
+
+.img:not(hover) + hgroup .blue-hover,
+img:not(:hover) + hgroup .red-hover {
+  color: var(--white-100);
+  transition: all 700ms;
+}

@@ -1,0 +1,47 @@
+{
+  "Ruolo": "Dott.ssa",
+  "Analisi": "Analisi",
+  "Prelievo": "Prelievo",
+  "Nutrizione": "Nutrizione",
+  "Ricerca": "Ricerca Biologica",
+  "Servizi_Titolo": "Servizi",
+  "Servizi": {
+    "Analisi": {
+      "Uno": "Check-up Completo Uomo/Donna",
+      "Due": "Check-up Allergologico",
+      "Tre": "Check-up di Prevenzione",
+      "Quattro": "Esami Genetici",
+      "Cinque": "Esame Covid-19"
+    },
+    "Prelievo": {
+      "Uno": "Prelievo e Consulenza a Domicilio",
+      "Due": "Consulenza Telefonica e/o per Email"
+    },
+    "Ricerca": {
+      "Uno": "Studi per la Cura di Disturbi Alimentari",
+      "Due": "Studi per la Cura del Cancro",
+      "Tre": "Studi per la Cura della Gestosi",
+      "Quattro": "Studi per la Cura di Diverse Malattie Genetiche"
+    },
+    "Nutrizione": {
+      "Uno": "Analisi Alimentari Specifiche del Paziente",
+      "Due": "Analisi delle Eventuali Intolleranze",
+      "Tre": "Dieta Studiata su Misura per il Paziente",
+      "Quattro": "Controlli Periodici per Valutazione Andamento"
+    }
+  },
+  "Successo_Invio_Email": "Email inviata con successo!",
+  "Errore_Invio_Email": "Errore durante l'invio dell'email! La invitiamo a riprovare più tardi.",
+  "Contattaci": "Contattaci",
+  "Campo_Obbligatorio": "Campo Obbligatorio!",
+  "Email_Formato_Errato": "Formato email non valido!",
+  "Oggetto": "Oggetto",
+  "Testo": "Testo",
+  "Placeholder_Email": "Inserisci la tua email",
+  "Placeholder_Oggetto": "Inserisci oggetto",
+  "Placeholder_Testo": "Inserisci testo",
+  "Invia": "Invia",
+  "Contatti": "Contatti",
+  "Via": "Via",
+  "Error_Page": "Pagina non trovata... sarai a breve reindirizzato alla Homepage"
+}

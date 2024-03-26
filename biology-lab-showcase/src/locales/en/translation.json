@@ -1,0 +1,47 @@
+{
+  "Ruolo": "Doc.",
+  "Analisi": "Analyses",
+  "Prelievo": "Sampling",
+  "Nutrizione": "Nutrition",
+  "Ricerca": "Biology Research",
+  "Servizi_Titolo": "Services",
+  "Servizi": {
+    "Analisi": {
+      "Uno": "Complete Check-up Man/Woman",
+      "Due": "Allergy Check-up",
+      "Tre": "Prevent Check-up",
+      "Quattro": "Genetic Tests",
+      "Cinque": "Covid-19 Tests"
+    },
+    "Prelievo": {
+      "Uno": "Home Sampling and Consultation",
+      "Due": "Telephone Consultation and/or by Email"
+    },
+    "Ricerca": {
+      "Uno": "Studies for the Treatment of Eating Disorders",
+      "Due": "Studies for the Treatment of Cancer",
+      "Tre": "Studies for the Treatment of Gestosis",
+      "Quattro": "Studies for the Treatment of Different Genetic Diseases"
+    },
+    "Nutrizione": {
+      "Uno": "Patient Specific Dietary Analysis",
+      "Due": "Analysis of Possible Intolerances",
+      "Tre": "Diet Tailored to the Patient",
+      "Quattro": "Periodic Checks for Evaluation of Progress"
+    }
+  },
+  "Successo_Invio_Email": "Email sent successfully!",
+  "Errore_Invio_Email": "Error sending email! Please try again later.",
+  "Contattaci": "Contact Us",
+  "Campo_Obbligatorio": "Required Field!",
+  "Email_Formato_Errato": "Invalid email format!",
+  "Oggetto": "Subject",
+  "Testo": "Text",
+  "Placeholder_Email": "Insert your email",
+  "Placeholder_Oggetto": "Insert subject",
+  "Placeholder_Testo": "Insert text",
+  "Invia": "Send",
+  "Contatti": "Contacts",
+  "Via": "Street",
+  "Error_Page": "Page not found... you will shortly be redirect to the Homepage"
+}

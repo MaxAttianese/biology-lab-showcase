@@ -1,0 +1,16 @@
+{
+  "short_name": "Attianese Lab.",
+  "name": "Attianese Lab. della dottoressa Yvonne Attianese",
+  "icons": [
+    {
+      "src": "./images/icons/attianese-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/icons/attianese-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

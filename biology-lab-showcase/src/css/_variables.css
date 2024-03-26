@@ -1,0 +1,20 @@
+:root {
+    --blue: #BEF8FF;
+    --blue-100: #08678C;
+    --blue-300: #032859;
+    --blue-400: #011C40;
+    --blue-500: #011126;
+    
+    --blue-hover: #22A6FE;
+
+    --yellow-100: #F2CE16;
+
+    --red-100: #F20F38;
+    --red-hover: #EB5468;
+
+    --white-100: #F2EFE9;
+
+    --black--100: #1C1C1C;
+
+    --gray: rgb(171, 171, 171);
+}

@@ -1,0 +1,70 @@
+@import "../../../../css/_variables.css";
+
+footer {
+  background-image: linear-gradient(
+    to top left,
+    var(--blue-500),
+    var(--blue-100) 90%
+  );
+  margin-top: 10rem;
+  padding: 8.4rem 0;
+}
+
+footer .section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.section .footer-title {
+  display: flex;
+  gap: 2rem;
+}
+
+.section .footer-flags {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer-img {
+  height: 6.8rem;
+  max-width: 6.8rem;
+}
+
+footer address {
+  color: var(--white-100);
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+address p {
+  align-items: center;
+  display: flex;
+}
+
+.icon {
+  color: var(--white-100);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.flag-icon {
+  height: auto;
+  width: 4rem;
+}
+.button-flag {
+  align-items: center;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.selected-language {
+  background-color: var(--blue-100);
+}
