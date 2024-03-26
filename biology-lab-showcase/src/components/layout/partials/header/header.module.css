@@ -1,0 +1,91 @@
+@import "../../../../css/_variables.css";
+
+header {
+  color: var(--white-100);
+  background-image: url("../../../../images/header/header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+
+header .section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  padding: 15rem 0;
+  text-align: center;
+}
+
+.header_img {
+  height: 15.6;
+  max-width: 15.6rem;
+}
+
+.img:hover {
+  transform: rotate(90deg);
+  transition: all 500ms;
+}
+
+.img:not(:hover) {
+  transform: rotate(0deg);
+  transition: all 500ms;
+}
+
+.img:hover + hgroup .blue_hover {
+  color: var(--blue-hover);
+  transition: all 700ms;
+}
+
+.img:hover + hgroup .red_hover {
+  color: var(--red-hover);
+  transition: all 700ms;
+}
+
+.img:not(:hover) + hgroup .blue_hover,
+img:not(:hover) + hgroup .red_hover {
+  color: var(--white-100);
+  transition: all 700ms;
+}
+
+.container {
+  display: grid;
+  height: auto;
+  max-width: 100%;
+  row-gap: 5rem;
+}
+
+.section {
+  margin: 0 9.6rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 95em) {
+  header div {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .section {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 67em) {
+  header h1 {
+    font-size: 5.2rem;
+  }
+
+  .header_img {
+    height: 10rem;
+    max-width: 10rem;
+  }
+}

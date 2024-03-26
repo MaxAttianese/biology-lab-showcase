@@ -9,6 +9,8 @@ import { IoMailUnreadSharp } from "react-icons/io5";
 import { FaMapPin } from "react-icons/fa";
 import en from '../../../../images/icons/flags/united-kingdom-flag-icon.png'
 import it from "../../../../images/icons/flags/italy-flag-icon.png";
+import style from "./footer.module.css";
+
 
 const Footer = ({lng, setLng}) => {
 
@@ -21,25 +23,29 @@ const Footer = ({lng, setLng}) => {
 
   return (
     <>
-      <footer className="container">
-        <div className="section">
+      <footer className={`${style.footer} ${style.container}`}>
+        <div className={style.section}>
           <div>
-            <div className="footer-title">
+            <div className={style.footer_title}>
               <img
                 src={image}
                 alt="Logo Attianese Lab"
-                className="footer-img img"
+                className={`${style.footer_img} ${style.img}`}
               />
               <hgroup>
-                <h4 className="blue-hover">Attianese Lab.</h4>
-                <h5 className='red-hover'>{t(resources[lng].traslation.Ruolo)} Yvonne Attianese</h5>
+                <h4 className={style.blue_hover}>Attianese Lab.</h4>
+                <h5 className={style.red_hover}>
+                  {t(resources[lng].traslation.Ruolo)} Yvonne Attianese
+                </h5>
               </hgroup>
             </div>
-            <div className="footer-flags">
+            <div className={style.footer_flags}>
               <button
                 type="click"
                 className={
-                  lng === "it" ? "button-flag selected-language" : "button-flag"
+                  lng === "it"
+                    ? `${style.button_flag} ${style.selected_language}`
+                    : `${style.button_flag}`
                 }
                 onClick={() => {
                   switchLanguage("it");
@@ -48,13 +54,15 @@ const Footer = ({lng, setLng}) => {
                 <img
                   src={it}
                   alt="Bandiera Italiana / It Flag"
-                  className="flag-icon"
+                  className={style.flag_icon}
                 />
               </button>
               <button
                 type="click"
                 className={
-                  lng === "en" ? "button-flag selected-language" : "button-flag"
+                  lng === "en"
+                    ? `${style.button_flag} ${style.selected_language}`
+                    : `${style.button_flag}`
                 }
                 onClick={() => {
                   switchLanguage("en");
@@ -62,7 +70,7 @@ const Footer = ({lng, setLng}) => {
               >
                 <img
                   src={en}
-                  className="flag-icon"
+                  className={style.flag_icon}
                   alt="Bandiera Inghilterra / En Flag"
                 />
               </button>
@@ -72,21 +80,21 @@ const Footer = ({lng, setLng}) => {
           <address>
             <h5>{t(resources[lng].traslation.Contatti)}</h5>
             <p>
-              <MdPhoneAndroid className="icon" />{" "}
+              <MdPhoneAndroid className={style.icon} />{" "}
               <a href="tel:+393922241233">(+39) 392 224 1233</a>
             </p>
             <p>
-              <MdAttachEmail className="icon" />{" "}
+              <MdAttachEmail className={style.icon} />{" "}
               <a href="mailto:yvonneattianese@gmail.com">
                 yvonneattianese@gmail.com
               </a>
             </p>
             <p>
-              <IoMailUnreadSharp className="icon" />
+              <IoMailUnreadSharp className={style.icon} />
               <a href="mailto:yvonneattianese@pec.it">yvonneattianese@pec.it</a>
             </p>
             <p>
-              <FaMapPin className="icon" />{" "}
+              <FaMapPin className={style.icon} />{" "}
               <span>
                 {t(resources[lng].traslation.Via)} Cutro, 129 - Crotone (Kr)
               </span>

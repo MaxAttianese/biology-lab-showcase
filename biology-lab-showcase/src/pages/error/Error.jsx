@@ -3,15 +3,14 @@ import { useNavigate } from "react-router-dom";
 import image from "../../images/icons/attianese-logo.png";
 import { resources } from "../../i18n";
 import { useTranslation } from "react-i18next";
+import style from './error.module.css'
 
-const Error = ({ setCurrentPage, lng }) => {
+const Error = ({ lng }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      sessionStorage.setItem("page", "Analisi");
-      setCurrentPage("Analisi");
       navigate("/");
     }, 5000);
     return () => {
@@ -20,17 +19,17 @@ const Error = ({ setCurrentPage, lng }) => {
   },[]);
 
   return (
-    <section className="container error">
-      <div className="overlay">
-        <div className="section error-content">
+    <section className={`${style.error}`}>
+      <div className={style.overlay}>
+        <div className={`${style.section} ${style.error_content}`}>
           <img
             src={image}
             alt="Logo Attianese Lab"
-            className="error-img img"
+            className={`${style.error_img} ${style.img}`}
           />
           <hgroup>
-            <h1 className="blue-hover">Attianese Lab.</h1>
-            <h5 className="red-hover">
+            <h1 className={style.blue_hover}>Attianese Lab.</h1>
+            <h5 className={style.red_hover}>
               {t(resources[lng].traslation.Ruolo)} Yvonne Attianese
             </h5>
           </hgroup>

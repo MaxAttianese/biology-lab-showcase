@@ -5,12 +5,10 @@ import ricerca from "../../images/ricerca/ricerca.jpg";
 import { resources } from "../../i18n";
 import { useTranslation } from "react-i18next";
 
-const Ricerca = ({ currentPage, setCurrentPage, lng, setLng }) => {
+const Ricerca = ({ lng, setLng }) => {
   const { t } = useTranslation();
   return (
     <Layout
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
       lng={lng}
       setLng={setLng}
     >

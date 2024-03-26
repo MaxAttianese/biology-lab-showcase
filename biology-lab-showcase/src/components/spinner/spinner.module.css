@@ -1,4 +1,4 @@
-.loading-page {
+.loading_page {
   align-items: center;
   background-color: var(--white-100);
   display: flex;
@@ -7,13 +7,6 @@
   position: fixed;
   width: 100%;
   z-index: 2;
-}
-
-.loading-content {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .spinner {

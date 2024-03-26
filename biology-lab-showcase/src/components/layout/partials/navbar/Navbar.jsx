@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import NavLinksModel from "../../../../models/NavLinksModel";
 import { resources } from "../../../../i18n";
 import { useTranslation } from "react-i18next";
+import style from './navbar.module.css'
 
-const Navbar = ({ currentPage, setCurrentPage, lng }) => {
+const Navbar = ({ lng }) => {
   const { t } = useTranslation();
   
   const links = [
@@ -14,17 +15,16 @@ const Navbar = ({ currentPage, setCurrentPage, lng }) => {
     new NavLinksModel("Ricerca","/ricerca"),
   ];
 
+  const location = useLocation();
+
+  const [currentPage, setCurrentPage] = useState("");
+
   useEffect(() => {
-    if (!sessionStorage.getItem("page")) {
-      let link = links.find(
-        (element) => element.link === window.location.pathname
-      );
-      changeCurrentPage(link ? link.name : "");
-    }
+    let path = location.pathname;
+    changeCurrentPage(path)
   }, []);
 
   const changeCurrentPage = (link) => {
-    sessionStorage.setItem("page", link);
     setCurrentPage(link);
   };
 
@@ -36,14 +36,14 @@ const Navbar = ({ currentPage, setCurrentPage, lng }) => {
             <Link
               key={link.name}
               className={
-                currentPage === link.name
-                  ? "nav-link link-current-page"
-                  : "nav-link"
+                currentPage === link.link
+                  ? `${style.nav_link} ${style.link_current_page}`
+                  : `${style.nav_link}`
               }
               id={link.name}
               to={link.link}
               onClick={() => {
-                changeCurrentPage(link.name);
+                changeCurrentPage(link.link);
               }}
             >
               {t(resources[lng].traslation[link.name])}

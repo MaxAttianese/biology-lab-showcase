@@ -1,0 +1,139 @@
+@import "../../../../css/_variables.css";
+
+footer {
+  background-image: linear-gradient(
+    to top left,
+    var(--blue-500),
+    var(--blue-100) 90%
+  );
+  margin-top: 10rem;
+  padding: 8.4rem 0;
+}
+
+footer .section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.section .footer_title {
+  display: flex;
+  gap: 2rem;
+}
+
+.section .footer_flags {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer_img {
+  height: 6.8rem;
+  max-width: 6.8rem;
+}
+
+footer address {
+  color: var(--white-100);
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+address p {
+  align-items: center;
+  display: flex;
+}
+
+.icon {
+  color: var(--white-100);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.flag_icon {
+  height: auto;
+  width: 4rem;
+}
+.button_flag {
+  align-items: center;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.selected_language {
+  background-color: var(--blue-100);
+}
+
+.img:hover {
+  transform: rotate(90deg);
+  transition: all 500ms;
+}
+
+.img:not(:hover) {
+  transform: rotate(0deg);
+  transition: all 500ms;
+}
+
+.img:hover + hgroup .blue_hover {
+  color: var(--blue-hover);
+  transition: all 700ms;
+}
+
+.img:hover + hgroup .red_hover {
+  color: var(--red-hover);
+  transition: all 700ms;
+}
+
+.img:not(:hover) + hgroup .blue_hover,
+img:not(:hover) + hgroup .red_hover {
+  color: var(--white-100);
+  transition: all 700ms;
+}
+
+.container {
+  display: grid;
+  height: auto;
+  max-width: 100%;
+  row-gap: 5rem;
+}
+
+.section {
+  margin: 0 9.6rem;
+}
+
+@media (max-width: 95em) {
+  footer .section {
+    flex-wrap: wrap;
+    gap: 10rem;
+  }
+
+  .section div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 67em) {
+  footer .section {
+    text-align: center;
+  }
+
+  footer address {
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 30em) {
+  address p {
+    align-items: start;
+  }
+}

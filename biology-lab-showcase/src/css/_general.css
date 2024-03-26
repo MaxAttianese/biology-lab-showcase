@@ -1,9 +1,4 @@
 @import "./_variables.css";
-@import "../components/layout/partials/header/header.css";
-@import "../components/layout/partials/navbar/navbar.css";
-@import "../components/main/main.css";
-@import "../components/layout/partials/form/form.css";
-@import "../components/layout/partials/footer/footer.css";
 
 * {
   box-sizing: border-box;
@@ -97,28 +92,15 @@ ul {
   line-height: 5rem;
 }
 
-.img:hover {
-  transform: rotate(90deg);
-  transition: all 500ms;
+@media (max-width: 95em) {
+  .section {
+    margin: 0 1rem;
+  }
 }
 
-.img:not(:hover) {
-  transform: rotate(0deg);
-  transition: all 500ms;
-}
-
-.img:hover + hgroup .blue-hover {
-  color: var(--blue-hover);
-  transition: all 700ms;
-}
-
-.img:hover + hgroup .red-hover {
-  color: var(--red-hover);
-  transition: all 700ms;
-}
-
-.img:not(hover) + hgroup .blue-hover,
-img:not(:hover) + hgroup .red-hover {
-  color: var(--white-100);
-  transition: all 700ms;
+@media (max-width: 30em) {
+  li {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
 }

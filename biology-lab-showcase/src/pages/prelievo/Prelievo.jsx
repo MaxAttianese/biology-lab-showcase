@@ -5,12 +5,10 @@ import prelievo from "../../images/prelievo/prelievo.jpg";
 import { resources } from "../../i18n";
 import { useTranslation } from "react-i18next";
 
-const Prelievo = ({ currentPage, setCurrentPage, lng, setLng }) => {
+const Prelievo = ({ lng, setLng }) => {
   const { t } = useTranslation();
   return (
     <Layout
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
       lng={lng}
       setLng={setLng}
     >

@@ -5,12 +5,10 @@ import nutrizione from "../../images/nutrizione/nutrizione.jpg";
 import { resources } from "../../i18n";
 import { useTranslation } from "react-i18next";
 
-const Nutrizione = ({ currentPage, setCurrentPage, lng, setLng }) => {
+const Nutrizione = ({ lng, setLng }) => {
   const { t } = useTranslation();
   return (
     <Layout
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
       lng={lng}
       setLng={setLng}
     >

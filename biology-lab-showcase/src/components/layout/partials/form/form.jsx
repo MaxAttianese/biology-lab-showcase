@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { resources } from "../../../../i18n";
 import { useTranslation } from "react-i18next";
+import style from './form.module.css';
 
 const Form = ({ lng }) => {
   const { t } = useTranslation();
@@ -66,29 +67,29 @@ const Form = ({ lng }) => {
   };
   return (
     <>
-      <div className="form-border"></div>
-      <section className="form-section">
-        <div className="overlay">
+      <div className={style.form_border}></div>
+      <section className={style.form_section}>
+        <div className={style.overlay}>
           {isEmailSended && (
-            <p className="form-success">
+            <p className={style.form_success}>
               {t(resources[lng].traslation.Successo_Invio_Email)}
             </p>
           )}
           {isErrorInEmailSended && (
-            <p className="form-error">
+            <p className={style.form_error}>
               {t(resources[lng].traslation.Errore_Invio_Email)}
             </p>
           )}
-          <div className="form-container">
+          <div className={style.form_container}>
             <h2>{t(resources[lng].traslation.Contattaci)}</h2>
             <div>
-              <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                <div className="input-flex">
+              <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
+                <div className={style.input_flex}>
                   <div>
                     {" "}
                     <label htmlFor="email">Email</label>
                     {errors.email && (
-                      <span className="input-error">
+                      <span className={style.input_error}>
                         {errors.email.message}
                       </span>
                     )}
@@ -100,13 +101,13 @@ const Form = ({ lng }) => {
                     autoComplete="off"
                   />
                 </div>
-                <div className="input-flex">
+                <div className={style.input_flex}>
                   <div>
                     <label htmlFor="subject">
                       {t(resources[lng].traslation.Oggetto)}
                     </label>{" "}
                     {errors.subject && (
-                      <span className="input-error">
+                      <span className={style.input_error}>
                         {errors.subject.message}
                       </span>
                     )}
@@ -120,14 +121,16 @@ const Form = ({ lng }) => {
                     autoComplete="off"
                   />
                 </div>
-                <div className="input-flex">
+                <div className={style.input_flex}>
                   <div>
                     <label htmlFor="text">
                       {" "}
                       {t(resources[lng].traslation.Testo)}
                     </label>{" "}
                     {errors.text && (
-                      <span className="input-error">{errors.text.message}</span>
+                      <span className={style.input_error}>
+                        {errors.text.message}
+                      </span>
                     )}
                   </div>
                   <textarea
@@ -146,7 +149,7 @@ const Form = ({ lng }) => {
           </div>
         </div>
       </section>
-      <div className="form-border"></div>
+      <div className={style.form_border}></div>
     </>
   );
 };

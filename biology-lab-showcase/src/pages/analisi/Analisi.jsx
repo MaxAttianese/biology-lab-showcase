@@ -5,12 +5,10 @@ import analisi from "../../images/analisi/analisi.jpg";
 import { resources } from "../../i18n";
 import { useTranslation } from "react-i18next";
 
-const Analisi = ({currentPage, setCurrentPage, lng, setLng}) => {
+const Analisi = ({lng, setLng}) => {
   const {t} = useTranslation();
   return (
     <Layout
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
       lng={lng}
       setLng={setLng}
     >

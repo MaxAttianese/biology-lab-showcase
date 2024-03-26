@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { SiAtom } from "react-icons/si";
-
-
+import style from './main.module.css'
 
 const Main = ({
   title,
@@ -20,7 +19,7 @@ const Main = ({
   }, [imgUrl]);
 
   return (
-    <main className="container section">
+    <main className={`${style.container} ${style.section}`}>
       <h2>{title}</h2>
       <section>
         {variant === "left" && (
@@ -28,8 +27,8 @@ const Main = ({
             {isLoaded ? (
               <img src={imgUrl} alt={imgAlt} />
             ) : (
-              <div className="main-spinner-container">
-                <div className="spinner"></div>
+              <div className={style.main_spinner_container}>
+                <div className={style.spinner}></div>
               </div>
             )}
           </>
@@ -54,8 +53,8 @@ const Main = ({
             {isLoaded ? (
               <img src={imgUrl} alt={imgAlt} />
             ) : (
-              <div className="main-spinner-container">
-                <div className="spinner"></div>
+              <div className={style.main_spinner_container}>
+                <div className={style.spinner}></div>
               </div>
             )}
           </>

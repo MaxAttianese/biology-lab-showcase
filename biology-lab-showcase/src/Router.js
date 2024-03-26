@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Analisi from "./pages/analisi/Analisi";
 import Prelievo from "./pages/prelievo/Prelievo";
@@ -7,9 +7,6 @@ import Ricerca from "./pages/ricerca/Ricerca";
 import Error from "./pages/error/Error";
 
 const Router = () => {
-  const [currentPage, setCurrentPage] = useState(
-    sessionStorage.getItem("page")
-  );
 
   const [lng, setLng] = useState(sessionStorage.getItem("lng") || "it");
 
@@ -21,8 +18,6 @@ const Router = () => {
           path="/analisi"
           element={
             <Analisi
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
               lng={lng}
               setLng={setLng}
             />
@@ -32,8 +27,6 @@ const Router = () => {
           path="/prelievo"
           element={
             <Prelievo
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
               lng={lng}
               setLng={setLng}
             />
@@ -43,8 +36,6 @@ const Router = () => {
           path="/nutrizione"
           element={
             <Nutrizione
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
               lng={lng}
               setLng={setLng}
             />
@@ -54,8 +45,6 @@ const Router = () => {
           path="/ricerca"
           element={
             <Ricerca
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
               lng={lng}
               setLng={setLng}
             />
@@ -63,7 +52,7 @@ const Router = () => {
         />
         <Route
           path="*"
-          element={<Error setCurrentPage={setCurrentPage} lng={lng} />}
+          element={<Error lng={lng} />}
         />
       </Routes>
     </BrowserRouter>
