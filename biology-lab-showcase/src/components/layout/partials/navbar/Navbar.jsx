@@ -42,9 +42,6 @@ const Navbar = ({ lng }) => {
               }
               id={link.name}
               to={link.link}
-              onClick={() => {
-                changeCurrentPage(link.link);
-              }}
             >
               {t(resources[lng].traslation[link.name])}
             </Link>
