@@ -21,8 +21,8 @@ const Navbar = ({ lng }) => {
 
   useEffect(() => {
     let path = location.pathname;
-    changeCurrentPage(path)
-  }, []);
+    changeCurrentPage(path);
+  }, [location.pathname]);
 
   const changeCurrentPage = (link) => {
     setCurrentPage(link);
